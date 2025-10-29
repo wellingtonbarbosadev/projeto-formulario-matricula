@@ -1,1 +1,103 @@
 @import url(global.css);
+@import url(layout.css);
+
+main {
+
+  a,
+  .logo {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  a.backButton {
+    margin-bottom: 24px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+section {
+
+  #header {
+    margin-bottom: 48px;
+
+    h2 {
+      font: var(--heading2);
+      color: var(--text-primary);
+    }
+
+    p {
+      font: var(--text);
+      margin-top: 8px;
+    }
+  }
+
+  #infoChild {
+    margin-top: 32px;
+
+    h4 {
+      font: var(--heading4);
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+
+  }
+}
+
+aside {
+  #headerAside {
+    h1 {
+      font: var(--heading1);
+      margin-block: 0.5rem;
+
+      span {
+        color: var(--text-highlight);
+      }
+
+    }
+
+    p {
+      font: var(--text);
+    }
+
+    img.illustration {
+      margin-block: 2rem;
+      width: 100%;
+      max-width: 31rem;
+    }
+  }
+}
+
+.turnoEstudo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 16rem;
+
+    border: 2px solid var(--stroke-default);
+    border-radius: 0.5rem;
+
+    img {
+      width: 3rem;
+    }
+  }
+
+}

@@ -1,20 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matricula escolar</title>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matricula escolar</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
 </head>
+
 <body>
-    <main>
-        <section>
-            <h2>Formulário de Matrícula</h2>
-        </section>
-        <aside>
-            <h1>Porque cada momento de aprendizado conta</h1>
-        </aside>
-    </main>
+  <main>
+    <section>
+
+      <div id="sectionContainer">
+        <div id="header">
+          <a href="#" class="backButton">
+            <img src="assets/icons/arrow-left-02.svg" alt="Ícone de voltar">
+            <span>Voltar</span>
+          </a>
+          <h2>Formulário de Matrícula</h2>
+          <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil <span>Estrelas do
+              Amanhã.</span></p>
+
+        </div>
+
+        <div id="form">
+          <div id="infoChild">
+            <h4>Informações da criança</h4>
+            <div class="inputGroup">
+              <label>
+                <span>Nome completo</span>
+                <input type="text" id="childName" name="childName" required>
+              </label>
+
+              <label>
+                <span>Data de nascimento</span>
+                <input type="date" id="childDOB" name="childDOB" required>
+              </label>
+
+              <label>
+                <span>Sexo</span>
+                <select id="childGender" name="childGender" required>
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="female">Feminino</option>
+                  <option value="male">Masculino</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Informações médicas</span>
+                <textarea id="childMedicalInfo" name="childMedicalInfo" rows="4"></textarea>
+              </label>
+
+              <label>
+                <span>Certidão de nascimento</span>
+                <input class="typeFile" type="file" id="childBirthCert" name="childBirthCert"
+                  accept=".pdf,.jpg,.jpeg,.png">
+              </label>
+
+            </div>
+          </div>
+
+          <div id="childAdress">
+            <h4>Endereço residencial</h4>
+            <div class="inputGroup">
+              <label>
+                <span>CEP</span>
+                <input type="text" id="childPostalCode" name="childPostalCode" required>
+              </label>
+
+              <div class="formGridCol">
+                <div class="flex-column">
+                  <label>
+                    <span>Rua</span>
+                    <input type="text" id="addressStreet" name="addressStreet" required>
+                  </label>
+                </div>
+                <div class="flex-column">
+
+                  <label>
+                    <span>Número</span>
+                    <input type="text" id="addressNumber" name="addressNumber" required>
+                  </label>
+                </div>
+              </div>
+
+              <div class="formGridCol">
+                <div class="flex-column">
+                  <label>
+                    <span>Cidade</span>
+                    <input type="text" id="addressCity" name="addressCity" required>
+                  </label>
+                </div>
+                <div class="flex-column">
+                  <label>
+                    <span>Estado</span>
+                    <select name="addressState" id="addressState" required>
+                      <option value="" disabled selected>Selecione</option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>Informações do responsável</h4>
+          <div class="inputGroup">
+            <label>
+              <span>Nome do responsável</span>
+              <input type="text" id="guardianName" name="guardianName" required>
+              <span class="infoSpan">Principal responsável legal e contato de emergência</span>
+            </label>
+            <label>
+              <span>Telefone</span>
+              <input type="tel" id="guardianPhone" name="guardianPhone" required>
+            </label>
+
+            <label>
+              <span>E-mail</span>
+              <input type="email" id="guardianEmail" name="guardianEmail" required>
+            </label>
+          </div>
+
+          <h4>Opções de matrícula</h4>
+          <p>Selecione o turno de estudo</p>
+          <div class="inputGroup turnoEstudo">
+            <label>
+              <input type="radio" name="studyShift" value="morning" required>
+
+              <img src="assets/icons/sun-cloud-02.svg" alt="">
+              <p>Manhã</p>
+            </label>
+            <label>
+              <input type="radio" name="studyShift" value="afternoon" required>
+              <img src="assets/icons/sun-02.svg" alt="">
+              <p>Tarde</p>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside>
+      <div id="asideContainer">
+        <div id="headerAside">
+          <div class="logo">
+            <img src="assets/logo.svg" alt="Estrelas do Amanhã">
+            <span>Estrelas do Amanhã</span>
+          </div>
+          <h1>Porque cada momento de <span>aprendizado</span> conta</h1>
+          <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
+
+          <img src="assets/illustration.svg" class="illustration"
+            alt="Duas crianças pequenas brincam juntas em uma sala de aula colorida e iluminada, cercadas por brinquedos educativos e materiais escolares. Ambas sorriem, transmitindo alegria e entusiasmo. Ao fundo, há prateleiras com livros e desenhos infantis nas paredes, criando um ambiente acolhedor e estimulante.">
+        </div>
+      </div>
+    </aside>
+  </main>
 </body>
+
 </html>

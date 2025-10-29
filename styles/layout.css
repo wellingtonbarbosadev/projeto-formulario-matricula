@@ -1,0 +1,28 @@
+main {
+    display: grid;
+    grid-template-columns: 51.25% 48.75%;
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+section {
+    overflow: auto;
+    padding: 4rem;
+
+    #sectionContainer {
+        max-width: 33rem;
+        margin-left: auto;
+    }
+
+}
+
+aside {
+    padding: 4rem;
+    background-color: var(--surface-secondary);
+
+    #asideContainer {
+        max-width: 31rem;
+        margin-right: auto;
+    }
+}
