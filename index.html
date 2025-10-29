@@ -89,7 +89,7 @@
                 <div class="flex-column">
                   <label>
                     <span>Rua</span>
-                    <input type="text" id="addressStreet" name="addressStreet" required>
+                    <input type="text" id="addressStreet" name="addressStreet" required value="Rua Bacurua" disabled>
                   </label>
                 </div>
                 <div class="flex-column">
@@ -105,14 +105,14 @@
                 <div class="flex-column">
                   <label>
                     <span>Cidade</span>
-                    <input type="text" id="addressCity" name="addressCity" required>
+                    <input type="text" id="addressCity" name="addressCity" required disabled value="Rio de Janeiro">
                   </label>
                 </div>
                 <div class="flex-column">
                   <label>
                     <span>Estado</span>
-                    <select name="addressState" id="addressState" required>
-                      <option value="" disabled selected>Selecione</option>
+                    <select name="addressState" id="addressState" required disabled>
+                      <option value="" disabled>Selecione</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
                       <option value="AP">Amapá</option>
@@ -131,7 +131,7 @@
                       <option value="PR">Paraná</option>
                       <option value="PE">Pernambuco</option>
                       <option value="PI">Piauí</option>
-                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RJ" selected>RJ</option>
                       <option value="RN">Rio Grande do Norte</option>
                       <option value="RS">Rio Grande do Sul</option>
                       <option value="RO">Rondônia</option>

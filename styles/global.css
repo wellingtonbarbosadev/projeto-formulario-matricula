@@ -134,6 +134,8 @@ h4 {
         resize: none;
         &:disabled {
             background-color: var(--surface-disabled);
+            opacity: .5;
+            color: var(--text-primary);
             cursor: not-allowed;
         }
 
