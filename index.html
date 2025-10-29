@@ -37,17 +37,17 @@
             <div class="inputGroup">
               <label>
                 <span>Nome completo</span>
-                <input type="text" id="childName" name="childName" required placeholder="Nome completo da criança">
+                <input type="text" id="childName" name="childName" placeholder="Nome completo da criança">
               </label>
 
               <label>
                 <span>Data de nascimento</span>
-                <input type="date" id="childDOB" name="childDOB" required>
+                <input type="date" id="childDOB" name="childDOB">
               </label>
 
               <label>
                 <span>Sexo</span>
-                <select id="childGender" name="childGender" required>
+                <select id="childGender" name="childGender">
                   <option value="" disabled selected>Selecione</option>
                   <option value="female">Feminino</option>
                   <option value="male">Masculino</option>
@@ -82,21 +82,21 @@
             <div class="inputGroup">
               <label>
                 <span>CEP</span>
-                <input type="text" id="childPostalCode" name="childPostalCode" required>
+                <input type="text" id="childPostalCode" name="childPostalCode">
               </label>
 
               <div class="formGridCol">
                 <div class="flex-column">
                   <label>
                     <span>Rua</span>
-                    <input type="text" id="addressStreet" name="addressStreet" required value="Rua Bacurua" disabled>
+                    <input type="text" id="addressStreet" name="addressStreet" value="Rua Bacurua" disabled>
                   </label>
                 </div>
                 <div class="flex-column">
 
                   <label>
                     <span>Número</span>
-                    <input type="text" id="addressNumber" name="addressNumber" required>
+                    <input type="text" id="addressNumber" name="addressNumber">
                   </label>
                 </div>
               </div>
@@ -105,13 +105,13 @@
                 <div class="flex-column">
                   <label>
                     <span>Cidade</span>
-                    <input type="text" id="addressCity" name="addressCity" required disabled value="Rio de Janeiro">
+                    <input type="text" id="addressCity" name="addressCity" disabled value="Rio de Janeiro">
                   </label>
                 </div>
                 <div class="flex-column">
                   <label>
                     <span>Estado</span>
-                    <select name="addressState" id="addressState" required disabled>
+                    <select name="addressState" id="addressState" disabled>
                       <option value="" disabled>Selecione</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
@@ -151,17 +151,21 @@
           <div class="inputGroup">
             <label>
               <span>Nome do responsável</span>
-              <input type="text" id="guardianName" name="guardianName" required placeholder="Nome completo do responsável">
+              <input type="text" id="guardianName" name="guardianName" placeholder="Nome completo do responsável">
               <span class="infoSpan">Principal responsável legal e contato de emergência</span>
             </label>
             <label>
               <span>Telefone</span>
-              <input type="tel" id="guardianPhone" name="guardianPhone" required placeholder="Telefone do responsável">
+              <input type="tel" id="guardianPhone" name="guardianPhone" placeholder="Telefone do responsável">
             </label>
 
             <label>
               <span>E-mail</span>
               <input type="email" id="guardianEmail" name="guardianEmail" required placeholder="E-mail do responsável">
+              <div class="error">
+                <img src="assets/icons/alert-circle.svg" alt="Ícone de alerta">
+                <span>Insira um e-mail válido</span>
+              </div>
             </label>
           </div>
 
@@ -169,13 +173,13 @@
           <p>Selecione o turno de estudo</p>
           <div class="inputGroup turnoEstudo">
             <label>
-              <input type="radio" name="studyShift" value="morning" required>
+              <input type="radio" name="studyShift" value="morning">
 
               <img src="assets/icons/sun-cloud-02.svg" alt="">
               <p>Manhã</p>
             </label>
             <label>
-              <input type="radio" name="studyShift" value="afternoon" required>
+              <input type="radio" name="studyShift" value="afternoon">
               <img src="assets/icons/sun-02.svg" alt="">
               <p>Tarde</p>
             </label>
