@@ -134,8 +134,9 @@ h4 {
         }
 
         &:focus {
-            border-color: var(--stroke-highlight);
-            box-shadow: 0 0 0.25rem var(--stroke-highlight);
+            outline: .25rem solid var(--surface-secondary);
+            border: 1px solid var(--stroke-highlight);
+            outline-offset: .1px;
         }
     }
 
