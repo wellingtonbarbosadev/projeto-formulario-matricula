@@ -26,6 +26,68 @@ main {
       height: 24px;
     }
   }
+
+  .turnoEstudo {
+    margin-top: .5rem;
+  }
+
+  .radioWrapper {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+      justify-items: center;
+  }
+
+  .radioInner {
+    width: 100%;
+    label {
+        transition: .3s;
+        height: 8rem;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        text-align: center;
+        align-content: center;
+        cursor: pointer;
+        display: block;
+        border: 2px solid var(--stroke-default);
+        border-radius: 0.5rem;
+
+        & input:hover,
+        & input:focus-within,
+        & input:focus,
+        & input {
+            all: unset;
+        }
+
+        &:hover,
+        &:focus-within {
+            border: 2px solid var(--stroke-highlight);
+
+            .circle {
+                background-image: url(../assets/icons/circle-hover.svg);
+            }
+        }
+
+        &:has(:checked) {
+            border: 2px solid var(--stroke-highlight);
+
+            .circle {
+                background-image: url(../assets/icons/circle-checked.svg);
+            }
+        }
+
+        position: relative;
+        .circle {
+            position: absolute;
+            background-image: url(../assets/icons/circle.svg);
+            width: 1.5rem;
+            height: 1.5rem;
+            top: .5rem;
+            left: .5rem;
+        }
+    }
+  }
+
 }
 
 section {
@@ -52,13 +114,17 @@ section {
       color: var(--text-primary);
       margin-bottom: 1.5rem;
     }
-
-
   }
 }
 
 aside {
   #headerAside {
+    .logo {
+      img {
+        width: 12.6875rem;
+      }
+    }
+
     h1 {
       font: var(--heading1);
       margin-block: 0.5rem;
@@ -69,35 +135,10 @@ aside {
 
     }
 
-    p {
-      font: var(--text);
-    }
-
     img.illustration {
       margin-block: 2rem;
-      width: ;
+      width: 100%;
       max-width: 31rem;
     }
   }
-}
-
-.turnoEstudo {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-
-  label {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    max-width: 16rem;
-
-    border: 2px solid var(--stroke-default);
-    border-radius: 0.5rem;
-
-    img {
-      width: 3rem;
-    }
-  }
-
 }

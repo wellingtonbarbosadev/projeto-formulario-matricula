@@ -172,17 +172,24 @@
           <h4>Opções de matrícula</h4>
           <p>Selecione o turno de estudo</p>
           <div class="inputGroup turnoEstudo">
-            <label>
-              <input type="radio" name="studyShift" value="morning">
-
-              <img src="assets/icons/sun-cloud-02.svg" alt="">
-              <p>Manhã</p>
-            </label>
-            <label>
-              <input type="radio" name="studyShift" value="afternoon">
-              <img src="assets/icons/sun-02.svg" alt="">
-              <p>Tarde</p>
-            </label>
+            <div class="radioWrapper">
+              <div class="radioInner">
+                <label>
+                  <div class="circle"></div>
+                  <input type="radio" name="studyShift" value="morning">
+                  <img src="assets/icons/sun-cloud-02.svg" alt="">
+                  <p>Manhã</p>
+                </label>
+              </div>
+              <div class="radioInner">
+                <label>
+                  <div class="circle"></div>
+                  <input type="radio" name="studyShift" value="evening">
+                  <img src="assets/icons/sun-02.svg" alt="">
+                  <p>Tarde</p>
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -192,7 +199,6 @@
         <div id="headerAside">
           <div class="logo">
             <img src="assets/logo.svg" alt="Estrelas do Amanhã">
-            <span>Estrelas do Amanhã</span>
           </div>
           <h1>Porque cada momento de <span>aprendizado</span> conta</h1>
           <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
