@@ -149,6 +149,7 @@ main {
     justify-content: flex-end;
     gap: 1rem;
     font: var(--text);
+
     button {
       height: 3rem;
       padding: .75rem 1.5rem;
@@ -158,15 +159,26 @@ main {
       border: none;
       cursor: pointer;
     }
+
     .saveResponse {
+      transition: .3s;
       background-color: transparent;
       color: var(--stroke-highlight);
       border: 2px solid var(--stroke-highlight);
+
+      &:hover {
+          box-shadow: 0 0 0 4px var(--surface-secondary);
+      }
+      
     }
 
     .submitButton {
-      background-color: var(--stroke-highlight);
+      transition: .3s;
+      background-color: var(--brand-dark);
       color: var(--surface-primary);
+
+      &:hover {
+          background-color: var(--brand-mid);
     }
 
   }
