@@ -92,28 +92,83 @@ main {
   }
 
   .sports-section > p {
-    margin-top: 1rem;
+    margin-block: 1rem;
     font: var(--text-sm);
   }
 
   .terms {
-    margin-top: 1.5rem;
+    margin-block: 1.5rem;
     font: var(--text-sm);
     color: var(--text-primary);
-    display: grid;
-    input {
-      all: unset;
-    }
 
-    a {
-      color: var(--text-highlight);
-      text-decoration: underline;
-      display: inline-block;
+    label {
+      display: flex;
+      gap: .75rem;
 
-      &:hover {
-        cursor: pointer;
+      input {
+        all: unset;
       }
+      
+      .checkbox {
+        width: 100%;
+        max-width: 1.1875rem;
+        background: url(../assets/icons/checkbox.svg) no-repeat top/contain;
+      }
+     
+
+      &:hover,
+      &:focus-within {
+        cursor: pointer;
+
+        .checkbox {
+          background: url(../assets/icons/checkbox-hover.svg) no-repeat top/contain;
+        }
+      }
+       
+      &:has(:checked) {
+        .checkbox {
+          background: url(../assets/icons/checkbox-checked.svg) no-repeat top/contain;
+        }
+      }
+
+      a {
+        color: var(--text-highlight);
+        text-decoration: underline;
+        display: inline-block;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
     }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    font: var(--text);
+    button {
+      height: 3rem;
+      padding: .75rem 1.5rem;
+      align-items: center;
+      text-align: center;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+    }
+    .saveResponse {
+      background-color: transparent;
+      color: var(--stroke-highlight);
+      border: 2px solid var(--stroke-highlight);
+    }
+
+    .submitButton {
+      background-color: var(--stroke-highlight);
+      color: var(--surface-primary);
+    }
+
   }
 
 }
