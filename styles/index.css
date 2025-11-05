@@ -41,12 +41,15 @@ main {
   .radioInner {
     width: 100%;
     label {
+        font: var(--text-sm);
+        color: var(--text-primary);
         transition: .3s;
         height: 8rem;
         width: 100%;
         padding: 0.75rem 1rem;
         text-align: center;
         align-content: center;
+        justify-content: center;
         cursor: pointer;
         display: block;
         border: 2px solid var(--stroke-default);
@@ -85,6 +88,31 @@ main {
             top: .5rem;
             left: .5rem;
         }
+    }
+  }
+
+  .sports-section > p {
+    margin-top: 1rem;
+    font: var(--text-sm);
+  }
+
+  .terms {
+    margin-top: 1.5rem;
+    font: var(--text-sm);
+    color: var(--text-primary);
+    display: grid;
+    input {
+      all: unset;
+    }
+
+    a {
+      color: var(--text-highlight);
+      text-decoration: underline;
+      display: inline-block;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
